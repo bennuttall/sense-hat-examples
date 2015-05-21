@@ -28,15 +28,23 @@ python3 random_sparkles.py
 
 Let your Astro Pi shine with pride
 
-[random_sparkles.py](python/random_sparkles.py)
+- [random_sparkles.py](python/random_sparkles.py)
 
 ### Conway's Game of Life
 
 [Conway's Game of Life]() is a zero-player cellular automaton game
 
-[conway.py](python/conway.py)
+- [conway.py](python/conway.py)
 
 The game is randomly generated each time. Some games will be over very quickly, others will last a few generations. Press `Ctrl + C` to quit and then run it again.
+
+### Minecraft Colour
+
+Walk around a Minecraft world and the Astro Pi will light up the colour of the block you're standing on
+
+- [minecraft-colour.py](python/minecraft-colour.py)
+
+Be sure to open a Minecraft world first
 
 ## Licence
 
