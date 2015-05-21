@@ -42,9 +42,17 @@ The game is randomly generated each time. Some games will be over very quickly, 
 
 Walk around a Minecraft world and the Astro Pi will light up the colour of the block you're standing on
 
-- [minecraft-colour.py](python/minecraft-colour.py)
+- [minecraft_colour.py](python/minecraft_colour.py)
 
 Be sure to open a Minecraft world first
+
+### Minecraft Map
+
+Walk around a Minecraft world and the Astro Pi will show an 8x8 map of your player's surroundings
+
+- [minecraft_map.py](python/minecraft_map.py)
+
+Be sure to open a Minecraft world first. Note blocks are cached for speed so alterations are not accounted for.
 
 ## Licence
 
