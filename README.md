@@ -30,6 +30,14 @@ Let your Astro Pi shine with pride
 
 [random_sparkles.py](python/random_sparkles.py)
 
+### Conway's Game of Life
+
+[Conway's Game of Life]() is a zero-player cellular automaton game
+
+[conway.py](python/conway.py)
+
+The game is randomly generated each time. Some games will be over very quickly, others will last a few generations. Press `Ctrl + C` to quit and then run it again.
+
 ## Licence
 
 All examples provided are free to use for any purpose, with or without attribution.
