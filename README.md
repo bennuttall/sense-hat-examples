@@ -22,6 +22,14 @@ cd astro-pi-examples/python
 python3 random_sparkles.py
 ```
 
+## Examples
+
+### Random Sparkles
+
+Let your Astro Pi shine with pride
+
+[random_sparkles.py](python/random_sparkles.py)
+
 ## Licence
 
 All examples provided are free to use for any purpose, with or without attribution.
