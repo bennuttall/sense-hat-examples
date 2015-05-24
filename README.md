@@ -62,6 +62,7 @@ Two colours are selected at random and shown on the Astro Pi - controlling the R
 
 Keys:
 
+```
 r: increase red
 t: decrease red
 g: increase green
@@ -69,6 +70,7 @@ h: decrease green
 b: increase blue
 n: decrease blue
 esc: give up
+```
 
 Requires [pi3d](https://pypi.python.org/pypi/pi3d)
 
