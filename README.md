@@ -72,8 +72,6 @@ n: decrease blue
 esc: give up
 ```
 
-Requires [pi3d](https://pypi.python.org/pypi/pi3d)
-
 ## Licence
 
 All examples provided are free to use for any purpose, with or without attribution.
