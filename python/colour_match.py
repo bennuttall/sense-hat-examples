@@ -67,4 +67,4 @@ else:
     print("Aiming for (%4.0f, %4.0f, %4.0f)" % target_colour)
     print("You got    (%4.0f, %4.0f, %4.0f)" % colour)
     print("Difference (%4.0f, %4.0f, %4.0f)" % diff)
-    print("Out by %i" % sum(diff))
+    print("Out by %i" % sum(abs(n) for n in diff))
