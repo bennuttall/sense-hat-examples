@@ -54,6 +54,24 @@ Walk around a Minecraft world and the Astro Pi will show an 8x8 map of your play
 
 Be sure to open a Minecraft world first. Note blocks are cached for speed so alterations are not accounted for.
 
+### Colour Match
+
+Two colours are selected at random and shown on the Astro Pi - controlling the RGB values with the keyboard you have to try to match the middle squares with the outside colour
+
+- [colour_match.py](python/colour_match.py)
+
+Keys:
+
+r: increase red
+t: decrease red
+g: increase green
+h: decrease green
+b: increase blue
+n: decrease blue
+esc: give up
+
+Requires [pi3d](https://pypi.python.org/pypi/pi3d)
+
 ## Licence
 
 All examples provided are free to use for any purpose, with or without attribution.
