@@ -3,10 +3,13 @@ from random import randint
 from pi3d import Keyboard
 from time import sleep
 
+ESC = 27
+STEP = 10
+
 def random_colour():
-    r = randint(0, 255)
-    g = randint(0, 255)
-    b = randint(0, 255)
+    r = randint(0, 25) * STEP
+    g = randint(0, 25) * STEP
+    b = randint(0, 25) * STEP
     return (r, g, b)
 
 def set_centre_square(colour):
@@ -17,8 +20,6 @@ def set_centre_square(colour):
 ap = AstroPi()
 
 keyb = Keyboard()
-
-ESC = 27
 
 target_colour = random_colour()
 initial_colour = random_colour()
@@ -36,23 +37,23 @@ while colour != target_colour:
         keyb.close()
         break
     if keypress == ord('r'):
-        if r < 255:
-            r += 1
+        if r < (255 - STEP):
+            r += STEP
     elif keypress == ord('t'):
-        if r > 0:
-            r -= 1
+        if r >= STEP:
+            r -= STEP
     elif keypress == ord('g'):
-        if g < 255:
-            g += 1
+        if g < (255 - STEP):
+            g += STEP
     elif keypress == ord('h'):
-        if g > 0:
-            g -= 1
+        if g >= STEP:
+            g -= STEP
     elif keypress == ord('b'):
-        if b < 255:
-            b += 1
+        if b < (255 - STEP):
+            b += STEP
     elif keypress == ord('n'):
-        if b > 0:
-            b -= 1
+        if b >= STEP:
+            b -= STEP
 
     colour = (r, g, b)
     set_centre_square(colour)
