@@ -1,15 +1,15 @@
 from astro_pi import AstroPi
 from random import randint
-from pi3d import Keyboard
+import pygame
+import pygame.locals as pgl
 from time import sleep
 
-ESC = 27
 STEP = 10
 
 def random_colour():
-    r = randint(0, 25) * STEP
-    g = randint(0, 25) * STEP
-    b = randint(0, 25) * STEP
+    r = randint(0, int(255 / STEP)) * STEP
+    g = randint(0, int(255 / STEP)) * STEP
+    b = randint(0, int(255 / STEP)) * STEP
     return (r, g, b)
 
 def set_centre_square(colour):
@@ -17,9 +17,36 @@ def set_centre_square(colour):
     for x, y in centre_pixels:
         ap.set_pixel(x, y, colour)
 
+def handle_event(event):
+    global colour
+    r, g, b = colour
+
+    if event.key == pgl.K_r:
+        if r < (255 - STEP):
+            r += STEP
+    elif event.key == pgl.K_t:
+        if r >= STEP:
+            r -= STEP
+    elif event.key == pgl.K_g:
+        if g < (255 - STEP):
+            g += STEP
+    elif event.key == pgl.K_h:
+        if g >= STEP:
+            g -= STEP
+    elif event.key == pgl.K_b:
+        if b < (255 - STEP):
+            b += STEP
+    elif event.key == pgl.K_n:
+        if b >= STEP:
+            b -= STEP
+
+    colour = (r, g, b)
+    set_centre_square(colour)
+
 ap = AstroPi()
 
-keyb = Keyboard()
+pygame.init()
+pygame.display.set_mode((640, 480))
 
 target_colour = random_colour()
 initial_colour = random_colour()
@@ -29,40 +56,23 @@ set_centre_square(initial_colour)
 
 colour = initial_colour
 
-while colour != target_colour:
-    r, g, b = colour
-    keypress = keyb.read()
+running = True
 
-    if keypress == ESC:
-        keyb.close()
-        break
-    if keypress == ord('r'):
-        if r < (255 - STEP):
-            r += STEP
-    elif keypress == ord('t'):
-        if r >= STEP:
-            r -= STEP
-    elif keypress == ord('g'):
-        if g < (255 - STEP):
-            g += STEP
-    elif keypress == ord('h'):
-        if g >= STEP:
-            g -= STEP
-    elif keypress == ord('b'):
-        if b < (255 - STEP):
-            b += STEP
-    elif keypress == ord('n'):
-        if b >= STEP:
-            b -= STEP
+while running:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+        elif event.type == pgl.KEYDOWN:
+            if event.key == pgl.K_ESCAPE:
+                running = False
+            else:
+                handle_event(event)
 
-    colour = (r, g, b)
-    set_centre_square(colour)
+    if colour == target_colour:
+        running = False
+        print("Well done")
 
-print()
-
-if colour == target_colour:
-    print("Well done")
-else:
+if colour != target_colour:
     diff = tuple(c - t for c, t in zip(colour, target_colour))
     print("Aiming for (%4.0f, %4.0f, %4.0f)" % target_colour)
     print("You got    (%4.0f, %4.0f, %4.0f)" % colour)
