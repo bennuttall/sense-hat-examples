@@ -54,7 +54,7 @@ Walk around a Minecraft world and the Astro Pi will show an 8x8 map of your play
 
 Be sure to open a Minecraft world first. Note blocks are cached for speed so alterations are not accounted for.
 
-### Colour Match
+### Colour Match Game
 
 Two colours are selected at random and shown on the Astro Pi - controlling the RGB values with the keyboard you have to try to match the middle squares with the outside colour
 
@@ -71,6 +71,22 @@ b: increase blue
 n: decrease blue
 esc: give up
 ```
+
+### Jokes
+
+One line jokes scrolling on your Astro Pi screen
+
+- [jokes.py](python/jokes.py)
+
+Choose your own jokes list
+
+### Geeky Jokes
+
+One line programmer jokes scrolling on your Astro Pi screen
+
+- [geeky_jokes.py](python/geeky_jokes.py)
+
+Requires [pyjokes](https://github.com/bennuttall/pyjokes)
 
 ## Licence
 
