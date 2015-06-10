@@ -88,6 +88,14 @@ One line programmer jokes scrolling on your Astro Pi screen
 
 Requires [pyjokes](https://github.com/bennuttall/pyjokes)
 
+### Astro Cam
+
+Stream a scaled-down picture from the camera module to the Astro Pi's LED matrix
+
+- [astro_cam.py](python/astro_cam.py)
+
+Requires a [camera module](https://www.raspberrypi.org/products/camera-module)
+
 ## Licence
 
 All examples provided are free to use for any purpose, with or without attribution.
