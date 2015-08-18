@@ -86,7 +86,7 @@ One line programmer jokes scrolling on your Astro Pi screen
 
 - [geeky_jokes.py](python/geeky_jokes.py)
 
-Requires [pyjokes](https://github.com/bennuttall/pyjokes)
+Requires [pyjokes](http://pyjok.es/)
 
 ### Astro Cam
 
