@@ -4,7 +4,7 @@ Example programs using the Sense HAT - particularly for the Astro Pi competition
 
 ## About
 
-British ESA astronaut [https://twitter.com/astro_timpeake](Tim Peake) is going to the [International Space Station](https://twitter.com/Space_Station) for 6 months at the end of 2015 and taking two [Raspberry Pi](https://www.raspberrypi.org/) computers to run experiments coded by participants in the [Astro Pi](http://astro-pi.org/) coding competition for UK schools.
+British ESA astronaut [Tim Peake](https://twitter.com/astro_timpeake) is going to the [International Space Station](https://twitter.com/Space_Station) for 6 months at the end of 2015 and taking two [Raspberry Pi](https://www.raspberrypi.org/) computers to run experiments coded by participants in the [Astro Pi](http://astro-pi.org/) coding competition for UK schools.
 
 The Sense HAT is the hardware attachment board mounted to the Pis on the ISS, and will be available to the public as a product soon.
 
