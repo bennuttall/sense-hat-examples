@@ -1,8 +1,8 @@
-from astro_pi import AstroPi
+from sense_hat import SenseHat
 from pyjokes import get_joke
 
-ap = AstroPi()
+sense = SenseHat()
 
 joke = get_joke()
 
-ap.show_message(joke)
+sense.show_message(joke)

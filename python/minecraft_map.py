@@ -1,5 +1,5 @@
 from mcpi import minecraft
-from astro_pi import AstroPi
+from sense_hat import SenseHat
 from time import sleep
 
 def get_blocks(size):
@@ -35,7 +35,7 @@ def map_blocks_to_colours(blocks):
     return [lookup_colour(block) for block in blocks]
 
 mc = minecraft.Minecraft.create()
-ap = AstroPi()
+sense = SenseHat()
 
 known_blocks = {}
 
@@ -66,4 +66,4 @@ while True:
     blocks = get_blocks(8)
     pixels = map_blocks_to_colours(blocks)
     pixels[player_pos] = black  # denote player as black pixel
-    ap.set_pixels(pixels)
+    sense.set_pixels(pixels)

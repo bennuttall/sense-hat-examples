@@ -1,4 +1,4 @@
-from astro_pi import AstroPi
+from sense_hat import SenseHat
 from random import randint
 import pygame
 import pygame.locals as pgl
@@ -15,7 +15,7 @@ def random_colour():
 def set_centre_square(colour):
     centre_pixels = [(3, 3), (3, 4), (4, 3), (4, 4)]
     for x, y in centre_pixels:
-        ap.set_pixel(x, y, colour)
+        sense.set_pixel(x, y, colour)
 
 def handle_event(event):
     global colour
@@ -43,7 +43,7 @@ def handle_event(event):
     colour = (r, g, b)
     set_centre_square(colour)
 
-ap = AstroPi()
+sense = SenseHat()
 
 pygame.init()
 pygame.display.set_mode((640, 480))
@@ -51,7 +51,7 @@ pygame.display.set_mode((640, 480))
 target_colour = random_colour()
 initial_colour = random_colour()
 
-ap.clear(target_colour)
+sense.clear(target_colour)
 set_centre_square(initial_colour)
 
 colour = initial_colour

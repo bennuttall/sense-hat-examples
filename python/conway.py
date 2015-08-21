@@ -1,10 +1,10 @@
 from itertools import product
 from random import choice
 from time import sleep
-from astro_pi import AstroPi
+from sense_hat import SenseHat
 
 
-ap = AstroPi()
+sense = SenseHat()
 
 class GameOfLife(object):
     def __init__(self, width, height):
@@ -65,7 +65,7 @@ class GameOfLife(object):
         for x in range(width):
             for y in range(height):
                 color = self.get_cell_color(x, y)
-                ap.set_pixel(x, y, color)
+                sense.set_pixel(x, y, color)
 
 
 def main():

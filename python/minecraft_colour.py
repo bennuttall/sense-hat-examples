@@ -1,9 +1,9 @@
 from mcpi import minecraft
-from astro_pi import AstroPi
+from sense_hat import SenseHat
 from time import sleep
 
 mc = minecraft.Minecraft.create()
-ap = AstroPi()
+sense = SenseHat()
 
 # blocks
 air = 0
@@ -30,5 +30,5 @@ while True:
     block = mc.getBlock(x, y-1, z)
     if block in colours:
         colour = colours[block]
-        ap.clear(colour)
+        sense.clear(colour)
     sleep(0.1)

@@ -1,7 +1,7 @@
-from astro_pi import AstroPi
+from sense_hat import SenseHat
 import random
 
-ap = AstroPi()
+sense = SenseHat()
 
 # jokes from http://www.laughfactory.com/jokes/word-play-jokes
 jokes = [
@@ -19,4 +19,4 @@ jokes = [
 
 joke = random.choice(jokes)
 
-ap.show_message(joke)
+sense.show_message(joke)

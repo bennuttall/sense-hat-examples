@@ -1,8 +1,8 @@
 from picamera import PiCamera
 from picamera.array import PiRGBArray
-from astro_pi import AstroPi
+from sense_hat import SenseHat
 
-ap = AstroPi()
+sense = SenseHat()
 
 while True:
     with PiCamera() as camera:
@@ -17,4 +17,4 @@ while True:
         for pixel in row
     ]
 
-    ap.set_pixels(pixels)
+    sense.set_pixels(pixels)
