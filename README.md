@@ -96,6 +96,18 @@ Stream a scaled-down picture from the camera module to the Sense HAT's LED matri
 
 Requires a [camera module](https://www.raspberrypi.org/products/camera-module)
 
+### Temperature Bar Graph
+
+Show a bar graph of the temperature in real time
+
+- [temperature.py](python/temperature.py)
+
+### Humidity Bar Graph
+
+Show a bar graph of the humidity in real time
+
+- [humidity.py](python/humidity.py)
+
 ## Licence
 
 All examples provided are free to use for any purpose, with or without attribution.
