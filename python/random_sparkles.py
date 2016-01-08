@@ -10,6 +10,5 @@ while True:
     r = randint(0, 255)
     g = randint(0, 255)
     b = randint(0, 255)
-    pixel = (r, g, b)
-    sense.set_pixel(x, y, pixel)
+    sense.set_pixel(x, y, r, g, b)
     sleep(0.01)
